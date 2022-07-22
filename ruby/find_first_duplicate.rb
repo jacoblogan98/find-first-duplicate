@@ -1,5 +1,15 @@
+require 'set'
+
 def find_first_duplicate(arr)
-  # type your code in here
+  uniques = Set.new 
+
+  for i in arr do 
+    return i if uniques.include?(i)
+
+    uniques.add(i)
+  end
+
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
